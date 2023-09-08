@@ -1,32 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ex/screen/home_scree.dart';
 
 void main() {
   runApp(
     const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: (HomeScreen()),
     ),
   );
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFF99231),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            'asset/img/logo.png',
-          ),
-          const CircularProgressIndicator(
-            color: Colors.white,
-          ),
-        ],
-      ),
-    );
-  }
 }
