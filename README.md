@@ -1,16 +1,23 @@
 # flutter_ex
 
-A new Flutter project.
+Flutter 연습!!
 
-## Getting Started
+실습 - challenge
+프로젝트 - project
+이론 - theory
 
-This project is a starting point for a Flutter application.
+### 1.
 
-A few resources to get you started if this is your first Flutter project:
+Widget Tree = Widget들의 부모, 자식 관계를 나타내는 것
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+프로젝트 목표
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 로딩 -> CircularProgressIndicator
+- Asset 추가하기
+- StatelessWidget 생성하기
+- Column 위젯
+- CircularProgresslndicator 위젯
+- image 위젯 -> pubspec.yaml -> assets:
+- debugShowCheckedModeBanner: false,
+- width: MediaQuery.of(context).size.width, -> 사이즈 가져옴
+- Expanded / Flexible -> only Column / Row
