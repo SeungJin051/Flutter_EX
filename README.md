@@ -6,11 +6,11 @@ Flutter 연습!!
 프로젝트 - project
 이론 - theory
 
-### 1.
+### 1. Splash Screen 앱 제작 & Row, Column
 
 Widget Tree = Widget들의 부모, 자식 관계를 나타내는 것
 
-프로젝트 목표
+#### 프로젝트 목표
 
 - 로딩 -> CircularProgressIndicator
 - Asset 추가하기
