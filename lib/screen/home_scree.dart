@@ -1,80 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  WebViewController? controller;
+  HomeScreen({super.key});
+
+  final homeUrl = 'https://seungjin051.github.io/Cloud_Computing_Blog/';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('SeungJin! AppBar'),
+        centerTitle: true,
+        backgroundColor: Colors.black38,
+        actions: [
+          IconButton(
+            onPressed: () {
+              if (controller == null) {
+                return;
+              }
+
+              controller!.loadUrl(homeUrl);
+            },
+            icon: const Icon(Icons.home),
+          ),
+        ],
+      ),
       body: SafeArea(
         bottom: false,
-        child: Container(
-          color: Colors.black,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    color: Colors.red,
-                    width: 50,
-                    height: 50,
-                  ),
-                  Container(
-                    color: Colors.orange,
-                    width: 50,
-                    height: 50,
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                    width: 50,
-                    height: 50,
-                  ),
-                  Container(
-                    color: Colors.green,
-                    width: 50,
-                    height: 50,
-                  ),
-                ],
-              ),
-              Container(
-                color: Colors.orange,
-                width: 50,
-                height: 50,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    color: Colors.red,
-                    width: 50,
-                    height: 50,
-                  ),
-                  Container(
-                    color: Colors.orange,
-                    width: 50,
-                    height: 50,
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                    width: 50,
-                    height: 50,
-                  ),
-                  Container(
-                    color: Colors.green,
-                    width: 50,
-                    height: 50,
-                  ),
-                ],
-              ),
-              Container(
-                color: Colors.green,
-                width: 50,
-                height: 50,
-              ),
-            ],
-          ),
+        child: WebView(
+          onWebViewCreated: (WebViewController controller) {
+            this.controller = controller;
+          },
+          initialUrl: homeUrl,
+          javascriptMode: JavascriptMode.unrestricted,
         ),
       ),
     );
