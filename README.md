@@ -36,6 +36,8 @@ WebView = 웹사이트를 앱처럼 보이게 만드는 것 (패키징)
 
 - WebView -> 컴퓨팅클라우드 (javascriptMode: JavascriptMode.unrestricted), controller!.loadUrl(homeUrl);
 - AppBar -> 앱의 상단 디자인
+
+- <img width="984" alt="스크린샷 2023-09-09 오후 11 07 27" src="https://github.com/SeungJin051/Flutter_EX/assets/83889135/ec24af5c-4502-4a14-a6f0-e688553e7da2">  
 - pub.dev(외부 패키지 활용법) -> 오픈소스 프로젝트 사용
 
-  <img src="https://github.com/SeungJin051/Flutter_EX/assets/83889135/184ab436-27d2-4db2-b6f2-7c7565162df4" width="400">
+  <img src="https://github.com/SeungJin051/Flutter_EX/assets/83889135/84313706-d385-499b-ad1c-edd8e44c9549" width="400">
